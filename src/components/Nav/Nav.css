@@ -1,0 +1,26 @@
+.nav-container{
+    background-color: rgb(233, 236, 250);
+    position: sticky;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-item-container{
+    flex: 1;
+}
+
+h2{
+    flex: 0.7;
+    color: rgb(8, 13, 44);
+}
+.nav-item{
+    text-align: left;
+    margin: 0px 10px;
+    color: black;
+}
+.nav-item1{
+    color: rgb(248, 245, 245);
+    text-decoration: none;
+}

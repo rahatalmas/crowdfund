@@ -1,0 +1,56 @@
+.home-page-banner-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 25px;
+    animation-name: bannerload;
+    animation-duration: 2s;
+    background-color: rgb(225, 223, 247);
+}
+@keyframes bannerload {
+    from{opacity: 0;}
+    to{opacity: 1;
+}
+    
+}
+.banner-img-container{
+    flex: 1.5;
+}
+.home-banner-items{
+    flex: 1;
+    text-align: left;
+    position: relative;
+}
+
+.banner-img{
+    width: 500px;
+    object-fit: cover;
+}
+.banner-img, h3{
+    margin: 10px;
+    color: rgb(219, 102, 48);
+}
+.banner-img ,h1{
+    margin: 8px;
+    color: purple;
+    font-size: 50px;
+}
+.banner-img, p{
+    margin: 10px;
+    font-size: large;
+    color: rgb(72, 68, 114);
+}
+
+.home-banner-button{
+    padding: 13px 25px;
+    margin: 10px;
+    background-color: rgb(44, 42, 139);
+    color: whitesmoke;
+    font-size: large;
+    outline: none;
+    border: none;
+    border-radius: 7px;
+}
+.circle{
+    position: absolute;
+}
