@@ -5,7 +5,7 @@ const Nav = () =>{
     return(
         <>
           <nav className='nav-container'>
-             <h2>Sirius</h2>
+             <h2>KickStart</h2>
              <div className='nav-item-container'>
              <NavLink className="nav-item" to="/">Home</NavLink>
              <NavLink className="nav-item" to="/invest">Invest</NavLink>

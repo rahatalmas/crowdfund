@@ -17,6 +17,7 @@ const HomePageBanner = () =>{
               </div>
               <div className="circle"></div>
           </div>
+          
         </>
     );
 }

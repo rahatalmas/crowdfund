@@ -14,7 +14,8 @@
     
 }
 .banner-img-container{
-    flex: 1.5;
+    flex: 1.25;
+    text-align: right;
 }
 .home-banner-items{
     flex: 1;

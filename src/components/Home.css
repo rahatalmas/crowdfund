@@ -1,0 +1,80 @@
+.home-feature-items{
+    margin: 25px 25px;
+}
+.home-page-app-add{
+    height: 30vh;
+    background-color: rgb(236, 234, 216);
+}
+.feature-items-container{
+   display: grid;
+   grid-template-columns: auto auto auto;
+   align-items: center;
+   justify-content: center;
+   gap: 20px;
+}
+.startup-card-container{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(237, 235, 250);
+    width: 250px;
+    height: 350px;
+    border-radius: 7px;
+    padding:10px;
+    box-shadow: 0 1px 2px 0 rgba(131, 131, 131, 0.2), 0 1px 2px 0 rgba(134, 134, 134, 0.19);
+    animation: Fade 3s;
+}
+
+@keyframes Fade {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+.card-image{
+    border-radius: 5px;
+}
+.img-card{
+    border-radius: 5px;
+}
+.startup-card-details{
+}
+
+.card-header{
+    margin: 10px 0px;
+    padding-left: 10px;
+    font-size: larger;
+    color: rgb(83, 128, 77);
+}
+
+.card-business-line{
+    font-size: 15px;
+    margin: 0;
+    padding-left: 10px;
+}
+
+.card-fund-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-bar{
+    height: 5px;
+    background-color: rgb(230, 177, 81);
+    margin:0px 10px;
+}
+
+.card-text{
+    margin: 10px;
+    color: rgb(43, 17, 71);
+}
+.card-text-span{
+    color: green;
+}
+.card-btn{
+    float: right;
+    color:green;
+}
+
+.site-map{
+    height: 30vh;
+    background-color: rgb(240, 227, 240);
+}
