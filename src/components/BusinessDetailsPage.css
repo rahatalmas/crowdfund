@@ -1,0 +1,118 @@
+.details-page-container{
+
+}
+
+.business-image-container{
+
+}
+
+.business-img{
+
+}
+
+.image-container-text{
+
+}
+
+.details-row{
+   display: grid;
+   grid-template-columns: 70% 28%;
+   gap: 50px;
+   align-items: start;
+   justify-content: center;
+   padding: 40px;
+   text-align: justify;
+}
+
+.details-col-1{
+   
+}
+
+.busniess-menu{
+
+}
+
+.b-m-item{
+    background-color: rgb(31, 31, 182);
+    color: aliceblue;
+    padding:10px 15px;
+    margin-right: 10px;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.business-descriptions{
+    
+}
+
+.b-d-h{
+   margin-top: 30px;
+}
+
+.ui-container{
+   
+}
+
+.b-li{
+   margin:20px 0px;
+}
+
+.b-dash-border{
+   border: 0.5px dashed rgb(98, 36, 104);
+}
+
+.pitch-header-c{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.pitch-start-point{
+   height: 15px;
+   width: 25px;
+   margin-right: 10px;
+   background-color: rgb(101, 122, 26);
+}
+.picth-header-finish{
+
+
+}
+.the-pitch{
+
+}
+
+
+
+.details-col-2{
+
+}
+
+.investment-info-card{
+    background-color: #e6e6ff;
+    margin-top: 50px;
+    padding:20px 10px;
+    border-radius: 10px;
+    border: 0.5px dashed rgb(26, 80, 58);
+}
+
+.i-c-h4{
+    color: rgb(107, 37, 107);
+    margin: 10px;
+}
+
+.i-c-h2{
+    color: rgb(7, 15, 48);
+    margin: 10px;
+}
+
+.i-c-btn{
+    border:none;
+    outline: none;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    background-color: navy;
+    color: white;
+    font-size: large;
+    border-radius: 10px;
+}
