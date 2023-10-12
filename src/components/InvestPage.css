@@ -1,0 +1,41 @@
+.invest-page-container{
+
+}
+
+.i-p-r{
+   display: grid;
+   grid-template-columns: 30% 70%;
+   justify-content: center;
+}
+
+.i-p-c1{
+   background-color: aquamarine;
+   height: 150vh;
+}
+
+.i-p-c2{
+   height: 150vh;
+}
+
+.i-p-filter-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.f-c{
+    flex: 1;
+}
+.s-c{
+    flex: 1;
+    text-align: right;
+}
+.filter{
+    width: 90%;
+    padding: 12px;
+    margin: 10px;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid rgb(216, 187, 197);
+}
+
