@@ -3,24 +3,35 @@
 }
 
 .i-p-r{
-   display: grid;
-   grid-template-columns: 30% 70%;
-   justify-content: center;
+   display: flex;
 }
 
 .i-p-c1{
-   background-color: aquamarine;
-   height: 150vh;
+   flex: 1;
+   background-color: rgb(222, 226, 247);
+   padding-top: 10px;
+   padding-left: 20px;
+   padding-bottom: 50px;
+}
+.check-box-container{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: start;
 }
 
 .i-p-c2{
-   height: 150vh;
+   flex: 1.5;
+   padding: 20px;
 }
 
 .i-p-filter-container{
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 30px;
 }
 
 .f-c{
@@ -31,11 +42,27 @@
     text-align: right;
 }
 .filter{
-    width: 90%;
-    padding: 12px;
-    margin: 10px;
-    box-sizing: border-box;
-    outline: none;
-    border: 1px solid rgb(216, 187, 197);
+   
 }
 
+.pagination {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 20px;
+ }
+ 
+ .pagination a {
+   color: black;
+   padding: 8px 16px;
+   text-decoration: none;
+   transition: background-color .3s;
+   border-radius: 5px;
+ }
+ 
+ .pagination a.active {
+   background-color: navy;
+   color: white;
+ }
+ 
+ .pagination a:hover:not(.active) {background-color: #bbcbff;}
