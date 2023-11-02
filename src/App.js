@@ -6,6 +6,8 @@ import InvestPage from './components/InvestPage';
 import Signup from './loginSignup/Signup';
 import Login from './loginSignup/Login';
 import BusinessDetailsPage from './components/BusinessDetailsPage';
+import ProfilePage from './components/UserProfile/ProfilePage';
+
 function App() {
   return (
     <div className="App">
@@ -15,8 +17,8 @@ function App() {
               <Route exact path='/' element={<Home/>}/>
               <Route path='/signup' element={<Signup/>}/>
               <Route path='/login' element={<Login/>}/>
-              <Route path='/invest' element={<InvestPage/>}>
-              </Route>
+              <Route path='/invest' element={<InvestPage/>}/>
+              <Route path='/profile/:name' element={<ProfilePage/>}/>
               <Route path='/invest/:title' element={<BusinessDetailsPage/>}/>
            </Routes>
         </BrowserRouter>

@@ -12,7 +12,7 @@ const Nav = () =>{
              <NavLink className="nav-item" to="/about">About</NavLink>
              <NavLink className="nav-item" to="/news">News</NavLink>
              </div>
-             <Link className='pro-pic' to='/profile/almas'><img src='./assets/gojo.jpg' style={{height:"50px",width:"50px",borderRadius:"100px",objectFit:"cover"}}/></Link>
+             <Link className='pro-pic' to='/profile/almas'><img src='https://w0.peakpx.com/wallpaper/254/297/HD-wallpaper-naruto-eyes-naruto-uzumaki-sage-mode-naruto-uzumaki-sage-mode-anime.jpg' style={{height:"50px",width:"50px",borderRadius:"100px",objectFit:"cover"}}/></Link>
           </nav>
         </>
     );

@@ -7,12 +7,9 @@
     background-color: rgb(236, 234, 216);
 }
 .feature-items-container{
-   display: grid;
-   grid-template-columns: auto auto auto;
-   align-items: center;
-   justify-content: center;
-   gap: 10px;
-   padding-bottom: 50px;
+    margin: 0 auto;
+    max-width: 1150px;
+    width: 100%;
 }
 
 
