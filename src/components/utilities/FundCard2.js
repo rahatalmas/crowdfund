@@ -3,7 +3,7 @@ import './FundCard2.css';
 const FuncCard2 = () =>{
     return(
         <>
-            <Link style={{textDecoration:"none",}} to='aidrone'>
+            <Link style={{textDecoration:"none",}} to='/invest/aidrone'>
                 <div className="fundCard2-container">
                     <div className="f2-image-container">
                         <img src="https://images.unsplash.com/photo-1527977966376-1c8408f9f108?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1160&q=80" className="f2-img"/>
