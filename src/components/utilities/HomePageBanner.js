@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom';
 import './HomePageBanner.css';
+import { useContext, useState } from 'react';
+import AuthContext from '../../globalStates/AuthContext';
 
 const HomePageBanner = () =>{
+    const {auth} = useContext(AuthContext);
     const images = ["bannerimg2.png","bannerimg1.png"]
     return(
         <>
@@ -13,7 +16,12 @@ const HomePageBanner = () =>{
                   <h3>Loream Ipsum</h3>
                   <h1>Crowd Fund</h1>
                   <p>Lorem ipsum dolor sit amet consecteru adpicing elit do ecution</p>
-                  <button className="home-banner-button"><Link className='nav-item1' to='/signup'>SignUp</Link></button>
+                  {
+                    auth?
+                    <button className="home-banner-button"><Link className='nav-item1' to='/invest'>Explore</Link></button>
+                    :
+                    <button className="home-banner-button"><Link className='nav-item1' to='/signup'>Signup</Link></button>
+                  }
               </div>
               <div className="circle"></div>
           </div>

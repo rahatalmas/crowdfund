@@ -1,15 +1,38 @@
 import './Login.css';
 import { Link } from 'react-router-dom';
-import { useState,useEffect } from 'react';
-
+import { useState,useEffect, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+import AuthContext from '../globalStates/AuthContext';
 const Login = () =>{
-    
+    const {setUser,setAuth} = useContext(AuthContext);
     const [email,setEmail] = useState('');
     const [password,setPassword] = useState('');
+
+    const navigate = useNavigate();
 
     const loginFormSubmit = (e) =>{
         e.preventDefault();
         console.log({email,password});
+        let user = {email,password};
+        fetch('http://localhost:5000/login',{
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify(user)
+        })
+        .then(response=>response.json())
+        .then(message=>{
+            console.log(message)
+            if(!message.message){
+                setUser(message)
+                setAuth(true)
+                navigate('/')
+            }else{
+                alert(message.message)
+            }
+        })
+
     }
 
     return(

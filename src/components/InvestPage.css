@@ -34,35 +34,11 @@
     margin-bottom: 30px;
 }
 
-.f-c{
-    flex: 1;
-}
-.s-c{
-    flex: 1;
-    text-align: right;
-}
-.filter{
-   
+
+.search{
+   padding: 10px;
+   width: 60%;
 }
 
-.pagination {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   padding: 20px;
- }
+
  
- .pagination a {
-   color: black;
-   padding: 8px 16px;
-   text-decoration: none;
-   transition: background-color .3s;
-   border-radius: 5px;
- }
- 
- .pagination a.active {
-   background-color: navy;
-   color: white;
- }
- 
- .pagination a:hover:not(.active) {background-color: #bbcbff;}

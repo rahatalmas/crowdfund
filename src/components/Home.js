@@ -2,7 +2,8 @@ import HomePageBanner from "./utilities/HomePageBanner";
 import './Home.css';
 import FuncCard from "./utilities/FundCard";
 import Carousel from "react-elastic-carousel";
-
+import { useContext } from "react";
+import AuthContext from "../globalStates/AuthContext";
 const Home = () =>{
 
   const breakPoints = [
@@ -12,14 +13,17 @@ const Home = () =>{
 ];
 const cardData = [1,2,3,5,6,7,8];
 
+const {user,setUser} = useContext(AuthContext);
+
     return(
         <>
           <div className="home-container">
+             
              <section className="home-page-banner-section">
                 <HomePageBanner/>
              </section>
              <section className="home-feature-items">
-                <h1 style={{marginTop:"50px",color:"purple"}}>Trending StartUps</h1>
+                <h1 style={{marginTop:"50px",color:"purple"}}>Demo Cards</h1>
                 <p style={{marginBottom:"35px"}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
                 <div className="feature-items-container">
                    <Carousel breakPoints={breakPoints}>
@@ -30,9 +34,6 @@ const cardData = [1,2,3,5,6,7,8];
                      }
                    </Carousel>
                 </div>
-             </section>
-             <section className="home-page-app-add">
-
              </section>
           </div>
         </>
