@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import './FundCard2.css';
-const FuncCard2 = ({id,title,headline,reason,pitch,amount,valuation,mininvest}) =>{
+const FuncCard2 = ({id,title,headline,reason,pitch,amount,valuation,mininvest,photo}) =>{
     return(
         <>
             <Link style={{textDecoration:"none",}} to={`/invests/${id}`}>
                 <div className="fundCard2-container">
                     <div className="f2-image-container">
-                        <img src="https://images.unsplash.com/photo-1527977966376-1c8408f9f108?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1160&q=80" className="f2-img"/>
+                        <img src={`http://localhost:5000/static/${photo}`} className="f2-img"/>
                     </div>
                     <div className="f2-text-container">
                           <h2 className="f2-card-header">{title}</h2>

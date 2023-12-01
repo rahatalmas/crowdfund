@@ -104,6 +104,7 @@ const Signup = () =>{
                             required type="password" autoComplete='true'
                             onChange={(e)=>{setPassword(e.target.value)}} 
                          />
+                                                 <label htmlFor="photo">photo<span>*</span></label>
 
                         <input type='submit' value="Submit" className='signup-btn'/>
                         <h4>Already Have Account?<Link to='/login' style={{color:"blue",marginLeft:"5px"}}>Login</Link></h4>

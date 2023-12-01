@@ -1,18 +1,7 @@
 .invest-page-container{
-
 }
 
-.i-p-r{
-   display: flex;
-}
 
-.i-p-c1{
-   flex: 1;
-   background-color: rgb(222, 226, 247);
-   padding-top: 10px;
-   padding-left: 20px;
-   padding-bottom: 50px;
-}
 .check-box-container{
    display: flex;
    flex-direction: column;
@@ -21,24 +10,43 @@
 }
 
 .i-p-c2{
-   flex: 1.5;
-   padding: 20px;
+   margin: auto;
 }
-
+.invest-page-business-container{
+   
+   margin: 0 auto;
+   padding: 20px;
+   display: grid;
+   grid-template-columns: auto auto;
+   align-items: center;
+   justify-content: center;
+}
+.s-c{
+  
+   max-width: 100%;
+   text-align: center;
+   margin: 30px auto;
+}
 .i-p-filter-container{
-    display: flex;
-    flex-direction: row;
     align-items: center;
-    margin-left: 10px;
-    margin-right: 10px;
     margin-bottom: 30px;
 }
 
 
 .search{
-   padding: 10px;
-   width: 60%;
+   padding:15px 10px;
+   width: 600px;
+   border-radius: 10px 0px 0px 10px;
+   border: 0.5px solid rgb(221, 221, 221);
+   font-size: medium;
 }
 
+.s-btn{
+   padding:15px 10px;
+   width: 80%;
+   border-radius: 0px 10px 10px 0px;
+   border: 0.5px solid rgb(221, 221, 221);
+   font-size: medium;
+}
 
  

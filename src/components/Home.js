@@ -4,8 +4,8 @@ import FuncCard from "./utilities/FundCard";
 import Carousel from "react-elastic-carousel";
 import { useContext } from "react";
 import AuthContext from "../globalStates/AuthContext";
-const Home = () =>{
 
+const Home = () =>{
   const breakPoints = [
   { width: 1, itemsToShow: 1 },
   { width: 900, itemsToShow: 1},

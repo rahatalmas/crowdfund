@@ -5,8 +5,10 @@ const BusinessDetailsPage = () =>{
 
     const [card, setCard] = useState({});
     const {   id } = useParams();
+    const [edit,setEdit] = useState(false);
     useEffect(() => {
         console.log(id)
+        console.log(card)
         const fetchProduct = async () => {
           try {
             const response = await fetch(`http://localhost:5000/invests/${id}`);
@@ -25,7 +27,7 @@ const BusinessDetailsPage = () =>{
            <div className="details-page-container">
                
                <div className='business-image-container'>
-                  <img className='business-img' src='https://images.unsplash.com/photo-1527977966376-1c8408f9f108?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1160&q=80' style={{width:"100%",height:"36vh",objectFit:"cover"}}/>
+                  <img className='business-img' src={`http://localhost:5000/static/${card.photo}`} style={{width:"100%",height:"36vh",objectFit:"cover"}}/>
                   <div className='image-container-text'>
                       
                   </div>
@@ -62,7 +64,11 @@ const BusinessDetailsPage = () =>{
                             <h2 className='i-c-h2'>${card.valuation}</h2>
                             <h4 className='i-c-h4'>Minimum Investment</h4>
                             <h2 className='i-c-h2'>${card.minInvest}</h2>
-                            <button className='i-c-btn'>Invest Now</button>
+
+                            {
+                              edit?< input/>:<div></div>
+                            }
+                            <button onClick={()=>{setEdit(!edit)}} className='i-c-btn'>Invest Now</button>
                         </div>
                    </div>
 

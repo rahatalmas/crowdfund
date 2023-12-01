@@ -5,9 +5,11 @@ import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import  axios  from 'axios';
 const ProfilePage = () =>{
     const {setUser,setAuth} = useContext(AuthContext);
     const [user, setuser] = useState({});
+    const [mycards,setMyCards] = useState([]);
     const {id } = useParams();
     const [editMode,setEditMode] = useState(false)
     //const {user} = useContext(AuthContext)
@@ -28,7 +30,14 @@ const ProfilePage = () =>{
         };
     
         fetchuser();
-      }, [id]);
+        //http://localhost:5000/mycards/1
+        axios.get(`http://localhost:5000/mycards/${id}`)
+        .then(cards=>{
+          console.log(1)
+          console.log(cards.data);
+          setMyCards(cards.data);
+        })
+      },[id]);
 
     const [email,setEmail] = useState(user.email);
     const [username,setName] = useState(user.username);
@@ -91,10 +100,21 @@ const ProfilePage = () =>{
              <div>
                 <h2 style={{marginLeft:"10px"}}>My Cards</h2>
                 <div className='my-cards'>
-                    <FundCard2/>
-                    <FundCard2/>
-                    <FundCard2/>
-                    <FundCard2/>
+                    {
+                      mycards.map(card=>(
+                        <FundCard2 
+                        id={card.id}
+                        title={card.title}
+                        headline={card.headline}
+                        reason={card.reason}
+                        pitch={card.pitch}
+                        amount={card.amount}
+                        valuation={card.valuation}
+                        mininvest={card.mininvest}
+                        photo={card.photo}
+                        />
+                      ))
+                    }
                 </div>
              </div>
              <div>

@@ -6,7 +6,7 @@ import AuthContext from '../globalStates/AuthContext';
 import axios from 'axios';
 
 const UploadForm = () =>{
-    const {setUser,setAuth} = useContext(AuthContext);
+    const {user,setUser,setAuth} = useContext(AuthContext);
     const [title,settitle] = useState('');
     const [headline,setheadline] = useState('');
     const [reason,setreason] = useState('');
@@ -14,14 +14,41 @@ const UploadForm = () =>{
     const [valuation,setvaluation] = useState('');
     const [raised,setraised] = useState('');
     const [minInvest,setmininvest] = useState('');
-    const [userId,setUserId] = useState(1);
+    const [userId,setUserId] = useState(user.id);
+    const [photo,setPhoto] = useState('');
+    const [file,setFile] = useState();
     const navigate = useNavigate();
+
+    const FileController = (e)=>{
+       setFile(e.target.files[0]);
+    }
 
     const signUpFormSubmit = (e) =>{
         e.preventDefault();
-        let card = {title,headline,reason,pitch,valuation,raised,minInvest,userId};
+        let card = {title,headline,reason,pitch,valuation,raised,minInvest,userId,photo:`${file.name}`};
+        //console.log(userId)
+        //console.log(card);
+        //console.log(file);
+        console.log(file.name);
+        const formData = new FormData();
 
-        console.log(card);
+        formData.append('file', file);
+  
+        fetch(
+           'http://localhost:5000/fileupload',
+           {
+              method: 'POST',
+              body: formData,
+           }
+        )
+           .then((response) => response.json())
+           .then((result) => {
+              console.log('Success:', result);
+           })
+           .catch((error) => {
+              console.error('Error:', error);
+           });
+
         axios.post('http://localhost:5000/postcard',card)
         .then(res=>{
          console.log(res)
@@ -88,6 +115,12 @@ const UploadForm = () =>{
                          <input id="mininvest" className="input" placeholder="50"
                             required type="text" autoComplete='true'
                             onChange={(e)=>{setmininvest(e.target.value)}} 
+                         />
+                        <label htmlFor="photo">photo<span>*</span></label>
+                         <input id="photo" className="input"
+                            required type="file"
+                            name='file'
+                            onChange={FileController} 
                          />
                         <input type='submit' value="Submit" className='signup-btn'/>
                      </form>
